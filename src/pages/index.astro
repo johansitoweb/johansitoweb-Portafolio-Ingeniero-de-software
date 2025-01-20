@@ -1,0 +1,72 @@
+---
+import ProjectSection from "@/components/ProjectSection"
+import PostsSection from "@/components/PostsSection"
+import Timeline from "@/components/Timeline"
+import Avatar from "@/components/Avatar"
+import Layout from "@/layouts/Layout.astro"
+import { HiOutlineArrowDownCircle as DownIcon } from "react-icons/hi2";
+import "@/styles/globals.css"
+---
+
+<script is:inline>
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme")
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light"
+  }
+  const isDark = getThemePreference() === "dark"
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+
+  if (typeof localStorage !== "undefined") {
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains("dark")
+      localStorage.setItem("theme", isDark ? "dark" : "light")
+    })
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    })
+  }
+</script>
+
+<Layout>
+  <main class="p-4 text-slate-1000 dark:text-slate-400">
+    <section class="flex flex-col w-full h-screen justify-center items-center">
+      <Avatar src="https://avatars.githubusercontent.com/u/147890607?v=4" alt="Johansitoweb" client:load/>
+      <h2
+        class="max-w-90 text-center sm:text-4xl"
+      >
+        Hello, I'm <strong>Johan Mancebo</strong>, Ingeniero de software
+    </h2>
+      <DownIcon className="text-2xl animate-bounce mt-10" />
+    </section>
+    <section class="flex flex-col w-full justify-center items-center gap-28 mt-56">
+      <h2 class="font-bold sm:text-3xl">Experience</h2>
+      <Timeline />
+    <section class="flex flex-col w-full justify-center items-center gap-28">
+      <h2 class="font-bold sm:text-3xl">Projects</h2>
+      <ProjectSection client:load />
+    </section>
+    </section>
+    <section class="flex flex-col w-full justify-center items-center gap-28 mt-56">
+      <h2 class="font-bold sm:text-3xl">Posts</h2>
+      <PostsSection client:load />
+    </section>
+    <section class="flex flex-col w-full justify-center items-center gap-28 mt-56">
+      <h2 class="font-bold">About me</h2>
+      <div class="flex flex-col items-center gap-4 max-w-[500px]">
+        <Avatar src="https://avatars.githubusercontent.com/u/147890607?v=4" alt="Johansitoweb" client:load/>
+        <p class="text-center">My name is <strong>johan Mancebo tambien conocido como johansitoweb</strong>, Ingeniero de software<strong>Mobile Developer</strong>, <strong>Frontend Developer</strong>, <strong>DevOps</strong>, <strong>Bakend Developer(python y Django)</strong>, <strong>Ruby Developer</strong> dentro de mis grandes exictos se encuentra un software para una ferreteria  , un salon y una veterinaria.</p>
+        <p class="text-center">.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p class="text-center text-sm text-slate-700 dark:text-slate-400 p-4 mt-28">
+      Ingeniero de software&#x2665; by johansitoweb | @Devs
+    </p>
+  </footer>
+</Layout>
