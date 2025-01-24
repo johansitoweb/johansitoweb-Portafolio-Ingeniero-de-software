@@ -3,11 +3,11 @@ import { PiLinkSimpleBold } from "react-icons/pi"
 
 export const PROJECTS = [
   {
-    title: "Johanifycss",
+    title: "Dragom Lua",
     description:
-      "Este es un framework minimalista de css",
+      "Projecto lua",
     image: "/neovim.jpg",
-    tags: ["Astro.js" , "Svelte", "css" , "react.js"],
+    tags: ["Lua" ],
     links: [
       {
         name: "Lazy",
@@ -40,35 +40,85 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "Landing Page",
-    description: "Landing page for entrepreneurship competition",
-    image: "/blueriver.jpg",
-    tags: ["JavaScript", "Next.js"],
+    title: "Software de veterinaria",
+    description: "Este es un producto de software realizado a la medida para una veterinaria",
+    image: "/4.png",
+    tags: ["Java", "Flutter" ,"mvc" , "flutter bloc", "Arquitectura microservicio" , "Figma","mysql", "sqlite"],
+    links: [
+      {
+        name: "github",
+        url: "",
+        icon: FaGithub,
+      },
+    ],
+  },
+  {
+    title: "Aplicacion movil de  clinica",
+    description: "proyecto para una clinica app para dispositivo moviles nativa",
+    image: "/3.png",
+    tags: ["kotlin", "jepack compouse" , "swift" , "swift ui" , "Figma"],
     links: [
       {
         name: "Preview",
-        url: "https://blue-river.vercel.app/",
+        url: "",
         icon: PiLinkSimpleBold,
       },
     ],
   },
   {
-    title: "Minimalist Portfolio",
-    description:
-      "minimalist-dragon is a free to use template for the Astro Themes repository.",
-    image: "/minimalist-dragon.jpg",
-    tags: ["Astro", "TypeScript"],
+    title: "Software de Ferreteria",
+    description: "sistema para una ferreteria",
+    image: "/web.png",
+    tags: ["wails","go","react", "typescript" ,"react router" ,"supabase" , "sqlite" ,"mongoDB" ,"web components" ,"Redis"],
     links: [
       {
-        name: "Astro Themes",
-        // url: "https://astro.build/themes/details/minimalist-dragon/",
+        name: "Preview",
+        url: "",
         icon: PiLinkSimpleBold,
       },
+    ],
+  },
+  {
+    title: "Videojuego 2D ",
+    description: "Juego en 2D creado con Godot y GDscript",
+    image: "/vi.png",
+    tags: ["GDscript", "Godot"],
+    links: [
       {
-        name: "Github",
-        // url: "https://github.com/slydragonn/minimalist-dragon",
+        name: "github",
+        url: "",
         icon: FaGithub,
       },
     ],
   },
+  {
+    title: "Tensorflow Clasificar de Imagenes",
+    description: "Modelo de inteligenia artificial con tensorflow en colab",
+    image: "/j.png",
+    tags: ["Tensorflow", "Colab"],
+    links: [
+      {
+        name: "github",
+        url: "https://github.com/johansitoweb/Tensorflow-Clasificar-Imagenes",
+        icon: FaGithub,
+      },
+    ],
+  },
+  
+  {
+    title: "web site de peluqueria",
+    description: "Este es un sitio web para una peluqueria",
+    image: "/sssaaaaaa.png",
+    tags: ["css" , "react.js" , "react router", "Tailwindcss"],
+    links: [
+      {
+        name: "Preview",
+        url: "https://drafapeluqueria.vercel.app/",
+        icon: PiLinkSimpleBold,
+      },
+    ],
+  },
+
+ 
+
 ]

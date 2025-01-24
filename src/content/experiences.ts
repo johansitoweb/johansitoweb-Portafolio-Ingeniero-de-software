@@ -13,4 +13,11 @@ export const EXPERIENCES = [
     description:
       "Trabaje como desarrollador movil  , asumi el rol como lider de proyectos y mentor de desarrolladores junior.",
   },
+  {
+    date: "Febrero 2022 -Septiembre 2023",
+    jobTitle: "Desarrollador de videojuegos y Blenderista 3D",
+    
+    description:
+      "Trabaje de forma remota con otros devs creando videjuegos y  modelo 3D como Blenderista",
+  },
 ]
